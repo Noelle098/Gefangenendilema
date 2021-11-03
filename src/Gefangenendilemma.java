@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -30,6 +31,18 @@ public class Gefangenendilemma {
     }
 
     private void gameEven(int round, List<Player> players) {
+        Random r = new Random();
+        while(round > 0){
+            List<Player> playersNochZUSpielen = players;
+            while (playersNochZUSpielen.size() > 0) {
+                Player p1 = playersNochZUSpielen.get(r.nextInt(playersNochZUSpielen.size()));
+                playersNochZUSpielen.remove(p1);
+                Player p2 = playersNochZUSpielen.get(r.nextInt(playersNochZUSpielen.size()));
+                playersNochZUSpielen.remove(p2);
+                fight(p1, p2);
+            }
+            round--;
+        }
     }
 
     private void fight(Player p1, Player p2) {
