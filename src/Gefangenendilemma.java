@@ -24,6 +24,8 @@ public class Gefangenendilemma {
         boolean p1B = p1.play(p2);
         boolean p2B = p2.play(p1);
 
+        // ToDo: weniger Zeilen in einer Methode wären gut. Nur eine Idee: Könnte man das nicht in Gewinnmatrix auslagern?
+
         if (p1B && p2B) {
             p1.result(gewinnmatrix.koopkoop, p2);
             p2.result(gewinnmatrix.koopkoop, p1);
