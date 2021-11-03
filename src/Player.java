@@ -1,9 +1,15 @@
 public abstract class Player {
-    int blanceAccount;
+    int balanceAccount;
+    Player lastEnemy;
 
-    public abstract boolean play();
+    public abstract boolean play(Player p);
 
-    public void balance(int i) {
-        blanceAccount += i;
+    public void result(int i, Player p) {
+        balanceAccount += i;
+        lastEnemy = p;
+        history(i);
     }
+
+    // Nachbearbeitung für nächstes Mal spielen
+    protected abstract void history(int erg);
 }
