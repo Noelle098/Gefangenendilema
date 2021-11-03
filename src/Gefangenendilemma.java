@@ -16,9 +16,6 @@ public class Gefangenendilemma {
     }
 
     public void initGame(int round, List<Player> players) {
-        // for round
-            // fight p, p
-        // new Random().nextInt(players.size());
         if (players.size() % 2 == 0) {
             gameEven(round, players);
         }
