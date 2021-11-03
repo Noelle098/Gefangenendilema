@@ -23,11 +23,9 @@ public class Gefangenendilemma {
             gameEven(round, players);
         }
         else {
-            gameOdd(round, players);
+            players.add(new ComputerBot());
+            gameEven(round, players);
         }
-    }
-
-    private void gameOdd(int round, List<Player> players) {
     }
 
     private void gameEven(int round, List<Player> players) {

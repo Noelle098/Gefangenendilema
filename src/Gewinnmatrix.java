@@ -1,36 +1,38 @@
 public class Gewinnmatrix {
-    int koopkoop;
-    int koopkoopN;
-    int koopNkoopN;
-
-    /* ToDo: hier fehlt noch etwas, weil es sein kann, dass der Betrag um den ein Konto eines Spielers erhöht wird,
-         nicht automatisch zu einer Reduktion desselben Betrages auf dem Konto eines anderen Spieler führt */
+    int koopKoop1, koopKoopN,koopNkoopN1;
+    int koopKoop2, koopNKoop,koopNkoopN2;
 
     Gewinnmatrix() {
-        koopkoop = 1;
-        koopkoopN = 3;
-        koopNkoopN = 2;
+        koopKoop1 = 1;
+        koopKoopN = -3;
+        koopNkoopN1 = -2;
+        koopKoop2 = 1;
+        koopNKoop = 3;
+        koopNkoopN2 = -2;
     }
 
-    public Gewinnmatrix(int koopkoop, int koopkoopN, int koopNkoopN) {
-        this.koopkoop = koopkoop;
-        this.koopkoopN = koopkoopN;
-        this.koopNkoopN = koopNkoopN;
+    public Gewinnmatrix(int koopKoop1, int koopKoopN, int koopNkoopN1, int koopKoop2, int koopNKoop, int koopNkoopN2) {
+        this.koopKoop1 = koopKoop1;
+        this.koopKoopN = koopKoopN;
+        this.koopNkoopN1 = koopNkoopN1;
+        this.koopKoop2 = koopKoop2;
+        this.koopNKoop = koopNKoop;
+        this.koopNkoopN2 = koopNkoopN2;
     }
 
     public void auswerten(boolean p1B, boolean p2B, Player p1, Player p2) {
         if (p1B && p2B) {
-            p1.result(koopkoop);
-            p2.result(koopkoop);
+            p1.result(koopKoop1);
+            p2.result(koopKoop2);
         } else if (p1B) {
-            p1.result(-koopkoopN);
-            p2.result(koopkoopN);
+            p1.result(koopKoopN);
+            p2.result(koopNKoop);
         } else if (p2B) {
-            p1.result(koopkoopN);
-            p2.result(-koopkoopN);
+            p1.result(koopNKoop);
+            p2.result(koopKoopN);
         } else {
-            p1.result(-koopNkoopN);
-            p2.result(-koopNkoopN);
+            p1.result(koopNkoopN1);
+            p2.result(koopNkoopN2);
         }
     }
 }
