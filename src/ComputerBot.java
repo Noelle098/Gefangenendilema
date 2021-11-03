@@ -10,4 +10,11 @@ public class ComputerBot extends Player {
     protected void history(int erg) {
 
     }
+
+    @Override
+    public String toString() {
+        return "ComputerBot{" +
+                "balanceAccount=" + balanceAccount +
+                '}';
+    }
 }

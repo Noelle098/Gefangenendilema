@@ -3,8 +3,7 @@ import java.util.List;
 import java.util.Random;
 
 public class Gefangenendilemma {
-    int round;
-    List<Player> players;
+
     Gewinnmatrix gewinnmatrix;
 
     Gefangenendilemma() {

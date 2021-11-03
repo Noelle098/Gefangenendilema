@@ -1,5 +1,5 @@
 public abstract class Player {
-    int balanceAccount;
+    int balanceAccount = 0;
     Player lastEnemy;
 
     public abstract boolean play(Player p);
@@ -7,6 +7,13 @@ public abstract class Player {
     public void result(int i) {
         balanceAccount += i;
         history(i);
+    }
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "balanceAccount=" + balanceAccount +
+                '}';
     }
 
     // Nachbearbeitung für nächstes Mal spielen
