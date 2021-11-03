@@ -2,6 +2,10 @@ public abstract class Player {
     int balanceAccount = 0;
     Player lastEnemy;
 
+    public int getBalanceAccount() {
+        return balanceAccount;
+    }
+
     public abstract boolean play(Player p);
 
     public void result(int i) {

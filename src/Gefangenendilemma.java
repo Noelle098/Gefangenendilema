@@ -27,7 +27,7 @@ public class Gefangenendilemma {
     private void gameEven(int round, List<Player> players) {
         Random r = new Random();
         while(round > 0){
-            List<Player> playersNochZUSpielen = players;
+            List<Player> playersNochZUSpielen = new ArrayList<>(players);
             while (playersNochZUSpielen.size() > 0) {
                 Player p1 = playersNochZUSpielen.get(r.nextInt(playersNochZUSpielen.size()));
                 playersNochZUSpielen.remove(p1);
@@ -41,6 +41,7 @@ public class Gefangenendilemma {
 
     private void fight(Player p1, Player p2) {
         boolean p1B = p1.play(p2);
+
         boolean p2B = p2.play(p1);
 
         gewinnmatrix.auswerten(p1B, p2B, p1, p2);
