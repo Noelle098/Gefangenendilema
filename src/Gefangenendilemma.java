@@ -18,26 +18,24 @@ public class Gefangenendilemma {
         // for round
             // fight p, p
         // new Random().nextInt(players.size());
+        if (players.size() % 2 == 0) {
+            gameEven(round, players);
+        }
+        else {
+            gameOdd(round, players);
+        }
+    }
+
+    private void gameOdd(int round, List<Player> players) {
+    }
+
+    private void gameEven(int round, List<Player> players) {
     }
 
     private void fight(Player p1, Player p2) {
         boolean p1B = p1.play(p2);
         boolean p2B = p2.play(p1);
 
-        // ToDo: weniger Zeilen in einer Methode wären gut. Nur eine Idee: Könnte man das nicht in Gewinnmatrix auslagern?
-
-        if (p1B && p2B) {
-            p1.result(gewinnmatrix.koopkoop, p2);
-            p2.result(gewinnmatrix.koopkoop, p1);
-        } else if (p1B) {
-            p1.result(-gewinnmatrix.koopkoopN, p2);
-            p2.result(gewinnmatrix.koopkoopN, p1);
-        } else if (p2B) {
-            p1.result(gewinnmatrix.koopkoopN, p2);
-            p2.result(-gewinnmatrix.koopkoopN, p1);
-        } else {
-            p1.result(-gewinnmatrix.koopNkoopN, p2);
-            p2.result(-gewinnmatrix.koopNkoopN, p1);
-        }
+        gewinnmatrix.auswerten(p1B, p2B, p1, p2);
     }
 }

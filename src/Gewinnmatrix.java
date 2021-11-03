@@ -17,4 +17,20 @@ public class Gewinnmatrix {
         this.koopkoopN = koopkoopN;
         this.koopNkoopN = koopNkoopN;
     }
+
+    public void auswerten(boolean p1B, boolean p2B, Player p1, Player p2) {
+        if (p1B && p2B) {
+            p1.result(koopkoop);
+            p2.result(koopkoop);
+        } else if (p1B) {
+            p1.result(-koopkoopN);
+            p2.result(koopkoopN);
+        } else if (p2B) {
+            p1.result(koopkoopN);
+            p2.result(-koopkoopN);
+        } else {
+            p1.result(-koopNkoopN);
+            p2.result(-koopNkoopN);
+        }
+    }
 }

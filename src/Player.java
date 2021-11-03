@@ -4,9 +4,8 @@ public abstract class Player {
 
     public abstract boolean play(Player p);
 
-    public void result(int i, Player p) {
+    public void result(int i) {
         balanceAccount += i;
-        lastEnemy = p;
         history(i);
     }
 
