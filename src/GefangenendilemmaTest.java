@@ -93,7 +93,7 @@ class GefangenendilemmaTest {
 
     @org.junit.jupiter.api.Test
     void initGameWenjie() {
-        gdf.initGame(3, List.of(playerTrue, wenjie));
+        gdf.initGame(3, new ArrayList<>(List.of(playerTrue, playerTrue2, wenjie)));
         System.out.println(wenjie);
     }
 
