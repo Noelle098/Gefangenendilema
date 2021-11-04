@@ -22,17 +22,17 @@ public class Gewinnmatrix {
 
     public void auswerten(boolean p1B, boolean p2B, Player p1, Player p2) {
         if (p1B && p2B) {
-            p1.result(koopKoop1);
-            p2.result(koopKoop2);
+            p1.result(koopKoop1, p2B);
+            p2.result(koopKoop2, p1B);
         } else if (p1B) {
-            p1.result(koopKoopN);
-            p2.result(koopNKoop);
+            p1.result(koopKoopN, p2B);
+            p2.result(koopNKoop, p1B);
         } else if (p2B) {
-            p1.result(koopNKoop);
-            p2.result(koopKoopN);
+            p1.result(koopNKoop, p2B);
+            p2.result(koopKoopN, p1B);
         } else {
-            p1.result(koopNkoopN1);
-            p2.result(koopNkoopN2);
+            p1.result(koopNkoopN1, p2B);
+            p2.result(koopNkoopN2, p1B);
         }
     }
 }
