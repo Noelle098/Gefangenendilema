@@ -20,6 +20,7 @@ public class SaraBot extends Player{
             PlayerBotSpeicher plBs = new PlayerBotSpeicher(p);
             speicher.add(plBs);
             lastIndex = speicher.indexOf(plBs);
+            lastReaction = plBs.getNextPlay();
         }
         return lastReaction;
     }
