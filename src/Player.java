@@ -13,12 +13,7 @@ public abstract class Player {
         history(reaction);
     }
 
-    @Override
-    public String toString() {
-        return "Player{" +
-                "balanceAccount=" + balanceAccount +
-                '}';
-    }
+
 
     // Nachbearbeitung für nächstes Mal spielen
     protected abstract void history(boolean reaction);

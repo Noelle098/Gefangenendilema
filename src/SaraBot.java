@@ -31,6 +31,13 @@ public class SaraBot extends Player{
 
     }
 
+    @Override
+    public String toString() {
+        return "SaraBot{" +
+                "balanceAccount=" + balanceAccount +
+                '}';
+    }
+
     class PlayerBotSpeicher {
         Player player;
         boolean nextPlay = false;

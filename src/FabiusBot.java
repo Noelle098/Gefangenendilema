@@ -9,4 +9,11 @@ public class FabiusBot extends Player {
     protected void history(boolean reaction) {
 
     }
+
+    @Override
+    public String toString() {
+        return "FabiusBot{" +
+                "balanceAccount=" + balanceAccount +
+                '}';
+    }
 }
