@@ -17,17 +17,13 @@ public class AlexisBot extends Player {
     }
 
     @Override
-    protected void history(int erg) {
-        Map<Player, Boolean> letzeReaktion = new HashMap<>();
-
-
-
-    }
-
-    @Override
     public String toString() {
         return "AlexisBot{" +
                 "balanceAccount=" + balanceAccount +
                 '}';
+    }
+
+    @Override
+    protected void history(boolean reaction) {
     }
 }
