@@ -14,6 +14,7 @@ class GefangenendilemmaTest {
     Player playerTrue2;
     Player playerFalse;
     Player playerFalse2;
+    WenjieBot wenjie;
 
     @BeforeEach
     void setUp() {
@@ -62,6 +63,7 @@ class GefangenendilemmaTest {
 
             }
         };
+        wenjie = new WenjieBot();
     }
 
 
@@ -87,6 +89,12 @@ class GefangenendilemmaTest {
         gdf.initGame(1, List.of(playerTrue, playerTrue2));
         Assertions.assertEquals(2, playerTrue.getBalanceAccount());
         Assertions.assertEquals(2, playerTrue2.getBalanceAccount());
+    }
+
+    @org.junit.jupiter.api.Test
+    void initGameWenjie() {
+        gdf.initGame(3, List.of(playerTrue, wenjie));
+        System.out.println(wenjie);
     }
 
 }
