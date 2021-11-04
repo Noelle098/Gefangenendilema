@@ -8,9 +8,9 @@ public abstract class Player {
 
     public abstract boolean play(Player p);
 
-    public void result(int i) {
+    public void result(int i, boolean reaction) {
         balanceAccount += i;
-        history(i);
+        history(reaction);
     }
 
     @Override
@@ -21,5 +21,5 @@ public abstract class Player {
     }
 
     // Nachbearbeitung für nächstes Mal spielen
-    protected abstract void history(int erg);
+    protected abstract void history(boolean reaction);
 }

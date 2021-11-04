@@ -25,7 +25,7 @@ class GefangenendilemmaTest {
             }
 
             @Override
-            protected void history(int erg) {
+            protected void history(boolean reaction) {
 
             }
         };
@@ -36,7 +36,7 @@ class GefangenendilemmaTest {
             }
 
             @Override
-            protected void history(int erg) {
+            protected void history(boolean reaction) {
 
             }
         };
@@ -47,7 +47,7 @@ class GefangenendilemmaTest {
             }
 
             @Override
-            protected void history(int erg) {
+            protected void history(boolean reaction) {
 
             }
         };
@@ -58,7 +58,7 @@ class GefangenendilemmaTest {
             }
 
             @Override
-            protected void history(int erg) {
+            protected void history(boolean reaction) {
 
             }
         };

@@ -7,7 +7,7 @@ public class ComputerBot extends Player {
     }
 
     @Override
-    protected void history(int erg) {
+    protected void history(boolean reaction) {
 
     }
 
